@@ -47,20 +47,25 @@ class _HomeScreenState extends State<HomeScreen> {
         appBar: AppBar(
           backgroundColor: Colors.white,
           elevation: 0,
-          title: const Text('Smart HOME'),
+          title: const Text('Smart Home'),
         ),
         drawer: const SideMenu(),
         floatingActionButton: FlaotingButton(),
         body: SingleChildScrollView(
           child: Column(
             children: [
+              SizedBox(
+                height: 20,
+              ),
               Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                 botonLuz(context),
                 sensorLuz(context),
                 sensorAction(context),
               ]),
+              SizedBox(
+                height: 20,
+              ),
               brilloWidget(context),
-
               tempColorWidget(context),
               Container(
                 color: _currentColor,

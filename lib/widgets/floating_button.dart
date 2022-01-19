@@ -173,7 +173,7 @@ class _FlaotingButtonState extends State<FlaotingButton> {
           } else if (commands.hasNullValue()) {
             var estado = await itemsService.getItemState(item);
             fulfillmentText +=
-                (int.parse(estado) > 500) ? "iluninado" : "Oscuro";
+                (int.parse(estado) < 500) ? "iluninado" : "Oscuro";
           }
 
           setState(() {
